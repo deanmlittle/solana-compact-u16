@@ -1,0 +1,17 @@
+[package]
+name = "solana-compact-u16"
+version = "0.1.0"
+description = "Simple compact u16 implementation with Borsh"
+edition = "2021"
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "solana_compact_u16"
+
+[features]
+default = ["use-borsh"]
+use-borsh = ["borsh"]
+
+[dependencies]
+borsh = { version = "^0.10.0", optional = true }
